@@ -34,6 +34,12 @@ namespace backEnd.Controllers
      _context.SaveChanges();
      return Ok(hairCut);
    }
+
+   [HttpPut ("{id}")]
+    public void Put (int id, [FromBody] HairCut hairCut) { }
+
+    [HttpDelete ("{id}")]
+    public void Delete (int id) { }
         // public async Task<IActionResult> Index()
         // {
         //     return View(await _context.HairCut.ToListAsync());

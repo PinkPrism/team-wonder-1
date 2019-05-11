@@ -33,6 +33,12 @@ namespace backEnd.Controllers
      return Ok(user);
    }
 
+   [HttpPut ("{id}")]
+    public void Put (int id, [FromBody] User user) { }
+
+    [HttpDelete ("{id}")]
+    public void Delete (int id) { }
+
         // GET: User
         // public async Task<IActionResult> Index()
         // {

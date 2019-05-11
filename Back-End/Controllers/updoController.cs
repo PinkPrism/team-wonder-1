@@ -27,6 +27,13 @@ namespace backEnd.Controllers
      return Ok(_context.updo);
    }
 
+   [HttpPost]
+   public IActionResult Post([FromBody] updo upDo){
+     _context.updo.Add(upDo);
+     _context.SaveChanges();
+     return Ok(upDo);
+   }
+
         // GET: updo
         // public async Task<IActionResult> Index()
         // {

@@ -26,6 +26,13 @@ namespace backEnd.Controllers
      return Ok(_context.User);
    }
 
+   [HttpPost]
+   public IActionResult Post([FromBody] User user){
+     _context.User.Add(user);
+     _context.SaveChanges();
+     return Ok(user);
+   }
+
         // GET: User
         // public async Task<IActionResult> Index()
         // {
